@@ -1,4 +1,4 @@
-name: backend-dev-ci-cd
+name: backend-prod-ci-cd
 on:
   push:
     branches:

@@ -38,10 +38,10 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: ./backend
-          file: ./backend/DockerFile-Dev
+          file: ./backend/DockerFile-Prod
           push: true
           platforms: linux/amd64
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/dailry:dev_${{ steps.get-timestamp.outputs.timestamp }}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/dailry:prod_${{ steps.get-timestamp.outputs.timestamp }}
 
   deploy: 
     needs: build
